@@ -1,4 +1,4 @@
-## 这里添加 Dockerfile 文件, 创建可以在 docker 中使用的镜像
+## 添加 Dockerfile 文件, 创建可以在 docker 中使用的镜像
 
 ## 使用 docker build -t 生成镜像文件, 定义 tag+version 信息
 $ docker rmi haizhuo/easymock:1.0.0

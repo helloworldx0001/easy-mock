@@ -1,3 +1,28 @@
+## 这里添加 Dockerfile 文件, 创建可以在 docker 中使用的镜像
+
+## 使用 docker build -t 生成镜像文件, 定义 tag+version 信息
+$ docker rmi haizhuo/easymock:1.0.0
+$ docker build -t haizhuo/easymock:1.0.0 .
+
+## 保存和备份生成的 easy-mock images 镜像
+$ docker save -o haizhuo.easymock.1.0.0.tar haizhuo/easymock:1.0.0
+$ docker load -i haizhuo.easymock.1.0.0.tar
+
+## 创建并启动 easy-mock container 容器, 修改 PORT 端口号, CONFIG 配置目录
+$ docker run -itd \
+-p PORT:7300 \
+-v CONFIG:/easymock/config \
+--privileged=true \
+--name=mock_nightingale \
+haizhuo/easymock:1.0.0
+
+$docker stop mock_nightingale
+$docker rm mock_nightingale
+$docker logs -f mock_nightingale
+$docker exec -it mock_nightingale /bin/bash
+
+## 使用 Nginx 代理访问 PROT 端口
+
 <p align="center"><a href="https://easy-mock.com" target="_blank"><img width="100"src="http://img.souche.com/20170509/png/fff9d8506199c4bf8cc53bad9d849215.png"></a></p>
 
 <p align="center">

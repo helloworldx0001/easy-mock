@@ -1,4 +1,8 @@
+## 创建一个可以在 docker container 容器中运行的 easy-mock
+
 ```js
+## 修改 package.json 中的 restc 版本到 0.3.2, 这是一个 bug 调试
+
 ## 添加 Dockerfile 文件, 创建可以在 docker 中使用的镜像
 
 ## 使用 docker build -t 生成镜像文件, 定义 tag+version 信息

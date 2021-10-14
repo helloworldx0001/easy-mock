@@ -1,3 +1,4 @@
+```js
 ## 添加 Dockerfile 文件, 创建可以在 docker 中使用的镜像
 
 ## 使用 docker build -t 生成镜像文件, 定义 tag+version 信息
@@ -22,6 +23,8 @@ $docker logs -f mock_nightingale
 $docker exec -it mock_nightingale /bin/bash
 
 ## 使用 Nginx 代理访问 PROT 端口
+
+```
 
 <p align="center"><a href="https://easy-mock.com" target="_blank"><img width="100"src="http://img.souche.com/20170509/png/fff9d8506199c4bf8cc53bad9d849215.png"></a></p>
 
